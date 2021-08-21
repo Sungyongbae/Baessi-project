@@ -7,7 +7,7 @@ import requests
 access = "access"
 secret = "secret"
 
-myToken = "xoxb-2005118006242-2011295416340-AI3xgAN1vhUDaQ6CfhjgxziT"
+myToken = "xoxb-2005118006242-2011295416340-DCkEspSYeXjBn2ZO2ruQyZuX"
 #기윤
 #myToken = "xoxb-2405325150050-2411528692612-sCB8LjUrQdrRRB7ArfzHXxlr"
 
@@ -70,8 +70,8 @@ while True:
         if start_time < now < end_time - datetime.timedelta(seconds=10):
             target_price_ETH = get_target_price("KRW-ETH", 0.1)
             target_price_XRP = get_target_price("KRW-XRP", 0.4)
-            ma10 = get_ma10("KRW-ETH")
-            ma10 = get_ma10("KRW-XRP")
+            ma10_ETH = get_ma10("KRW-ETH")
+            ma10_XRP = get_ma10("KRW-XRP")
             current_price_ETH = get_current_price("KRW-ETH")
             current_price_XRP = get_current_price("KRW-XRP")
             if check_buy_ETH == False and target_price_ETH < current_price_ETH and ma10 < current_price_ETH:
